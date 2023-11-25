@@ -1,0 +1,38 @@
+<div class="row mt-4">
+    <div class="col-12 text-center">
+        <h3>Passport Master Report</h3>
+    </div>
+</div>
+
+<div class="row">    
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Applicant Name</th>
+                    <th>Date of Birth</th>
+                    <th>Previous PP No</th>
+                    <th>Passport Service Type</th>
+                    <th>Application Date</th>
+                    <th>Consulate Fees</th>
+                    <th>Service Fees</th>
+                    <th>SST</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pass of passportReports; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{pass.name}}</td>
+                    <td>{{pass.dob}}</td>
+                    <td>{{pass.prevPassport}}</td>
+                    <td>{{pass.pService}}</td>
+                    <td>{{pass.adob}}</td>
+                    <td>{{pass.cfee}} RM</td>
+                    <td>{{pass.sfee}} RM</td>
+                    <td>{{pass.sst}}RM</td>
+                    <td>{{pass.cfee+pass.sfee+pass.sst}} RM</td>
+                </tr> 
+            </tbody>
+        </table>   
+</div>
